@@ -1,0 +1,785 @@
+.btn-mobile-nav {
+    border: none;
+    background: none;
+    cursor: pointer;
+    display: none;
+    z-index: 1;
+}
+
+.icon-mobile-nav {
+    font-size: 4.4rem;
+    color: var(--text-color);
+}
+
+/* .icon-mobile-nav.open {} */
+
+.icon-mobile-nav.close {
+    display: none;
+}
+
+
+/*.------------------------------- */
+/*! HEADER SECTION */
+/*. ------------------------------- */
+.header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--bg-color);
+    padding: 0 4.8rem;
+    /* because we want the header to be sticky later  */
+    height: 8rem;
+}
+
+.header-logo {
+    height: 2rem;
+}
+
+.main-nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* gap: 3.2rem; */
+}
+
+.main-nav-link:link,
+.main-nav-link:visited {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1.8rem;
+    font-weight: 500;
+    padding: 1.2rem 1.4rem;
+    border-radius: 9px;
+    transition: all 0.3s;
+}
+
+.main-nav-link:hover,
+.main-nav-link:active {
+    color: var(--secondry-color);
+    box-shadow: inset 0 0 0 2px var(--primary-color);
+}
+
+/* it means main-nav-link class also have nav-cta class : so it has higher selector specifity */
+.main-nav-link.nav-cta:link,
+.main-nav-link.nav-cta:visited {
+    color: #fff;
+    background-color: var(--primary-color);
+}
+
+
+.main-nav-link.nav-cta:hover,
+.main-nav-link.nav-cta:active {
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+}
+
+
+/*. ------------------------------- */
+/*! MAIN HERO SECTION */
+/*. ------------------------------- */
+.section-hero {
+    background-color: var(--bg-color);
+    padding: 4.8rem 0 9.6rem 0;
+}
+
+
+.hero {
+    max-width: 130rem;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 9.6rem;
+    padding: 0 3.2rem;
+}
+
+
+.hero-description {
+    font-size: 2rem;
+    line-height: 1.6;
+    margin-bottom: 4.8rem;
+}
+
+.hero-img {
+    /* it will fill the parent container of hero-img class image which is = hero-img-box*/
+    width: 100%;
+}
+
+/*-> small Images with a pragraph*/
+.delivered-meals {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+    margin-top: 8rem;
+}
+
+.delivered-imgs {
+    display: flex;
+}
+
+.delivered-imgs img {
+    height: 4.8rem;
+    width: 4.8rem;
+    border-radius: 50%;
+    margin-right: -1.6rem;
+    border: 3px solid var(--bg-color);
+}
+
+.delivered-imgs img:last-child {
+    margin: 0;
+}
+
+.delivered-text {
+    color: var(--text-color);
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+.delivered-text span {
+    font-weight: bold;
+    color: var(--secondry-color);
+}
+
+/*! Buttons */
+.btn,
+.btn:link,
+.btn:visited {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 1.6rem 3.2rem;
+    border-radius: 10px;
+    /* Put transition on original state */
+    transition: all 0.3s;
+}
+
+/*-> Btn full and btn outline */
+.btn--full:link,
+.btn--full:visited {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.btn--outline:link,
+.btn--outline:visited {
+    color: var(--text-color);
+    /* trick to add border inside button */
+    box-shadow: inset 0 0 0 2px var(--primary-color);
+
+}
+
+/*-> HOVER EFFECT */
+.btn--full:hover,
+.btn--full:active {
+    background-color: var(--secondry-color);
+}
+
+.btn--outline:hover,
+.btn--outline:active {
+    color: var(--primary-color);
+}
+
+
+/*. ------------------------------- */
+/*! FEATURED IN SECTION */
+/*. ------------------------------- */
+.section-featured {
+    padding: 4.8rem 0 3.2rem 0;
+}
+
+.heading-featured-in {
+    color: var(--text-color);
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.75px;
+    font-weight: bold;
+    opacity: 0.5;
+    margin-bottom: 3rem;
+}
+
+.featured-in-logos img {
+    height: 3.2rem;
+    filter: brightness(0);
+    opacity: 0.5;
+}
+
+.featured-in-logos {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3.2rem;
+}
+
+/*. ------------------------------- */
+/*! HOW IT WORKS SECTION */
+/*. ------------------------------- */
+
+.section-how {
+    padding: 9.6rem 0;
+}
+
+.step-img {
+    width: 50%;
+}
+
+.step-number {
+    font-size: 8.6rem;
+    font-weight: 600;
+    color: var(--text-color);
+    opacity: 0.3;
+    margin-bottom: 1.2rem;
+}
+
+.step-description {
+    font-size: 1.8rem;
+    line-height: 1.8;
+}
+
+.step-img-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+}
+
+/* because of : align-items: center; in the grid class  */
+/* .step-text-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+} */
+
+
+.step-img-box::before,
+.step-img-box::after {
+    content: "";
+    display: block;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+}
+
+.step-img-box::before {
+    width: 60%;
+    /* height: 60%; */
+
+    /* 60% of parents width */
+    padding-bottom: 60%;
+    background-color: var(--bg-color);
+
+
+}
+
+.step-img-box::after {
+    width: 50%;
+    /* height: 60%; */
+
+    /* 60% of parents width */
+    padding-bottom: 50%;
+    background-color: var(--bg-color-2);
+}
+
+/*. ------------------------------- */
+/*! VARIOUS MEALS SECTION */
+/*. ------------------------------- */
+
+.section-meals {
+    padding: 9.6rem 0;
+}
+
+/* -> MEAL CARDS */
+.meal-card {
+    border-radius: 12px;
+    box-shadow: var(--box-shadow);
+    /* so that image can be not overflown */
+    overflow: hidden;
+    /* transition: margin-bottom 0.3s; */
+    transition: all 0.3s;
+}
+
+.meal-card:hover {
+    transform: translate(0, -3%);
+}
+
+.meal-img {
+    width: 100%;
+}
+
+.meal-content {
+    padding: 3.2rem 4.8rem 4.8rem 4.8rem;
+}
+
+.meal-tags {
+    margin-bottom: 1.2rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.tag {
+    display: inline-block;
+    padding: 0.4rem 0.8rem;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: var(--bg-color);
+    border-radius: 25px;
+    font-weight: 600;
+
+}
+
+.tag.vegan {
+    background-color: #2f9e44;
+}
+
+.tag.paleo {
+    background-color: #f08c00;
+}
+
+.meal-title {
+    font-size: 2.4rem;
+    color: var(--text-color);
+    font-weight: 600;
+    margin-bottom: 3.2rem;
+}
+
+.meal-attributes {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.meal-attribute {
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+}
+
+.meal-attribute i {
+    font-size: 2.4rem;
+    color: var(--primary-color);
+}
+
+/* -> MEAL LIST */
+.meal-list-items {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+
+.meal-list-item {
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+}
+
+.meal-list-item i {
+    font-size: 3rem;
+    color: var(--primary-color);
+}
+
+.all-meals {
+    font-size: 1.8rem;
+
+}
+
+.all-meals a:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+/*. ------------------------------- */
+/*! TESTIMONIAL AND GALLERY SECTION */
+/*. ------------------------------- */
+
+.section-testimonials-gallery {
+    display: grid;
+    grid-template-columns: 0.8fr 1fr;
+    align-items: center;
+    background-color: var(--bg-color);
+}
+
+/* -> testimonials */
+
+.testimonials-container {
+    padding: 9.6rem;
+}
+
+.testimonials.grid--2-cols {
+    gap: 4.8rem 8rem;
+}
+
+.testimonials .testimonial-img {
+    width: 7.4rem;
+    border-radius: 50%;
+    margin-bottom: 1.2;
+    border: var(--secondry-color) 3px solid;
+    padding: 2.5px;
+}
+
+.testimonials .testimonial-text {
+    font-size: 1.8rem;
+    line-height: 1.8;
+    margin-bottom: 1.6rem;
+}
+
+.testimonials .testimonial-name {
+    font-size: 1.6rem;
+    color: var(--text-color);
+    opacity: 0.6;
+}
+
+/* -> Gallery */
+.gallery.grid--3-cols {
+    gap: 1.6rem;
+    padding: 1.6rem;
+}
+
+.gallery-item {
+    overflow: hidden;
+}
+
+.gallery-item img {
+    display: block;
+    width: 100%;
+    transition: all 0.4s;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.1);
+}
+
+
+/*. ------------------------------- */
+/*! PRICING and FEATURES SECTION */
+/*. ------------------------------- */
+.section-pricing-features {
+    padding: 9.6rem 0;
+}
+
+.section-pricing-features.grid--2-cols {
+    row-gap: 0;
+    margin-bottom: 6.4rem;
+}
+
+.pricing-plan {
+    border-radius: 11px;
+    box-shadow: var(--box-shadow);
+    padding: 4.6rem;
+    border: 2px solid var(--primary-color);
+    /* so that image can be not overflown */
+    overflow: hidden;
+    /* transition: margin-bottom 0.3s; */
+    transition: all 0.3s;
+}
+
+.pricing-plan:hover {
+    transform: translate(0, -3%);
+    background-color: var(--bg-color);
+}
+
+.pricing--starter-plan {
+    justify-self: end;
+}
+
+.pricing--complete-plan {
+    justify-self: start;
+    /* background-color: var(--bg-color); */
+    position: relative;
+    overflow: hidden;
+}
+
+.pricing--complete-plan::after {
+    content: "Best value";
+    position: absolute;
+    top: 6%;
+    right: -18%;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #fff;
+    background-color: var(--primary-color);
+    padding: 0.8rem 8rem;
+    transform: rotate(45deg);
+}
+
+/* ->plan header (3 items) */
+.plan-header .plan—name {
+    color: var(--primary-color);
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    margin-bottom: 3.2rem;
+}
+
+.plan-header .plan—price {
+    color: var(--text-color);
+    font-size: 6.2rem;
+    font-weight: 600;
+    margin-bottom: 1.6rem;
+}
+
+.plan-header .plan—price span {
+    font-size: 3rem;
+    font-weight: 500;
+    margin-right: 0.8rem;
+}
+
+.plan-header .plan-text {
+    font-size: 1.6rem;
+    line-height: 1.6;
+}
+
+/* ->plan list items */
+.plan-list-items {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+
+.plan-list-item {
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+}
+
+.plan-list-item i {
+    font-size: 3rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-right: 1.2rem;
+}
+
+.pricing--starter-plan ul li:last-child {
+    opacity: 0.7;
+}
+
+.pricing-text {
+    color: var(--text-color);
+    font-size: 1.6rem;
+    line-height: 1.6;
+    margin-bottom: 9.6rem;
+}
+
+/* ->feature */
+.feature {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* gap: 3rem; */
+}
+
+.feature-icon {
+    height: 3.2rem;
+    width: 3.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: var(--bg-color);
+    padding: 3.2rem;
+    margin-bottom: 3rem;
+}
+
+.feature-icon i {
+    color: var(--primary-color);
+    font-size: 3.4rem;
+}
+
+.feature-title {
+    font-size: 2.4rem;
+    color: var(--text-color);
+    font-weight: 700;
+    margin-bottom: 1.6rem;
+}
+
+.feature-text {
+    font-size: 1.8rem;
+    line-height: 1.8;
+}
+
+/*. ------------------------------- */
+/*! Call To Action SECTION */
+/*. ------------------------------- */
+
+.section-cta {
+    padding: 4.8rem 0 12.8rem 0;
+}
+
+.cta {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    border-radius: 1.6rem;
+    background-color: var(--tertiary-color);
+    box-shadow: var(--box-shadow);
+    /* so image can blend in */
+    overflow: hidden;
+}
+
+.cta-text-box {
+    color: var(--text-color);
+    padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+}
+
+
+
+.cta-img-box {
+    /* background-image: linear-gradient(to right bottom, rgba(235, 151, 78, 0.35), rgba(230, 125, 34, 0.35)), url(../img/eating.jpg); */
+    /* because we are n css folder so we use (../img/) to go a step back */
+    background: url(../img/eating.jpg) center/cover no-repeat;
+    opacity: 0.7;
+}
+
+/*-> CTA TEXT BOX EDITING */
+.cta .heading-secondary {
+    margin-bottom: 3.2rem;
+}
+
+.cta-text {
+    font-size: 1.8rem;
+    line-height: 1.8;
+    margin-bottom: 4.8rem;
+}
+
+/*-> CTA FORM */
+.cta-form.grid--2-cols {
+    /* override the reusable 2 by 2 grid  */
+    gap: 2.4rem 3.2rem;
+}
+
+/* label is an inline element, so to set its margin we need to set it as block level element */
+.cta-form label {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin-bottom: 1.2rem;
+}
+
+.cta-form input,
+.cta-form select {
+    width: 100%;
+    padding: 1.2rem;
+    font-size: 1.8rem;
+    font-family: inherit;
+    color: inherit;
+    border: none;
+    background-color: var(--bg-color);
+    border-radius: 9px;
+    box-shadow: var(--box-shadow);
+}
+
+.cta-form input::placeholder {
+    opacity: 0.5;
+}
+
+.btn--form {
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    align-self: end;
+    padding: 1.2rem;
+    border: none;
+    cursor: pointer;
+}
+
+.btn--form:hover {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* new property : focus */
+section *:focus,
+.cta *:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.6rem var(--bg-color-2);
+}
+
+/*. ------------------------------- */
+/*! Call To Action SECTION */
+/*. ------------------------------- */
+.footer {
+    background-color: var(--bg-color);
+}
+
+.grid-footer {
+    display: grid;
+    grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
+    gap: 9.6rem 6.4rem;
+    padding: 10rem 2rem;
+}
+
+.footer-heading {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 3.2rem;
+}
+
+.footer-link:link,
+.footer-link:visited {
+    text-decoration: none;
+    font-size: 1.6rem;
+    color: grey;
+    transition: all 0.3s;
+}
+
+.footer *:focus,
+.footer-link:active,
+.footer-link:hover {
+    outline: none;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.footer-nav {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+}
+
+.address {
+    font-size: 1.6rem;
+    color: grey;
+}
+
+
+.logo-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    height: 2.2rem;
+    margin-bottom: 2.2rem;
+}
+
+.social-links {
+    font-size: 3.4rem;
+    display: flex;
+    list-style: none;
+    gap: 2.4rem;
+    margin-bottom: 3.6rem;
+}
+
+.social-links i {
+    font-size: 2.6rem;
+    color: var(--text-color);
+}
+
+.copyright {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    color: #767676;
+}

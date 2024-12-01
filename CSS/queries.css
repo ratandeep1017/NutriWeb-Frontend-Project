@@ -1,0 +1,323 @@
+/*!em and em doesn't depend on html font-size in media queries*/
+
+/*!Instead use, 1rem = 1em = 16px (rem has some bugs while using media queries so use em instead) */
+
+@media (max-width: 84em) {
+    .hero {
+        max-width: 120rem;
+    }
+
+    .heading-primary {
+        font-size: 4.4rem;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* .testimonials {
+        grid-template-columns: repeat(1, 1fr);
+    } */
+    .header {
+        padding: 0 3.2rem;
+    }
+}
+
+/* -> for tablet below 1200px : (1200px / 16px=75em) */
+@media (max-width: 75em) {
+
+    html {
+        /* 9px / 16px = 56.25% : (its all due to power of rem that we used in style.css)*/
+        font-size: 56.25%;
+    }
+
+    .grid {
+        gap: 6.4rem 4.8rem;
+    }
+
+    .heading-secondary {
+        font-size: 3.6rem;
+    }
+
+    .heading-tertiary {
+        font-size: 2.4rem;
+    }
+
+    .section-testimonials-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .testimonials-container {
+        padding: 3.2rem 9.6rem;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    .hero {
+        gap: 4.8rem;
+    }
+
+    .testimonials.grid--2-cols {
+        gap: 6.4rem 8rem;
+    }
+}
+
+/* -> for mobile below 944px: (944px/16px=59em) */
+@media (max-width: 59em) {
+
+    /* 8px / 16px = 0.5 = 50% */
+    html {
+        font-size: 50%;
+    }
+
+    .section-hero {
+        text-align: center;
+        padding-bottom: 1.6rem;
+    }
+
+    .hero {
+        flex-direction: column;
+        padding: 0 8rem;
+        gap: 6.4rem;
+    }
+
+    .hero-img {
+        width: 60%;
+    }
+
+    .delivered-meals {
+        justify-content: center;
+        margin-top: 3.2rem;
+    }
+
+    .featured-in-logos img {
+        height: 2.4rem;
+    }
+
+    .step-number {
+        font-size: 7.4rem;
+    }
+
+    .meal-content {
+        padding: 2.4rem 3.2rem 3.2rem 3.2rem;
+    }
+
+    .cta {
+        grid-template-columns: 2fr 3fr;
+    }
+
+    .cta-form {
+        grid-template-columns: 1fr;
+    }
+
+    .btn--form {
+        margin-top: 1.2rem;
+    }
+
+    /* mobile navigation */
+    .btn-mobile-nav {
+        display: block;
+    }
+
+    .main-nav {
+        background-color: var(--bg-color);
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translateX(100%);
+        width: 100%;
+        height: 100vh;
+        opacity: 0.9;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.5s ease-in;
+        /* ------------------------------------------------------------------------ */
+        /*. default it should be diaplay:none; but it allows no transitions at all */
+        /* display: none; */
+        /* ------------------------------------------------------------------------ */
+        /*? 1) Hide it visually: by using opacity but it is still accessible to mouse and keyboard*/
+        opacity: 0;
+        /*? 2) Make It unaccessible to mouse and keyboard  */
+        pointer-events: none;
+        /*? 3) Hide it from screen readers  */
+        visibility: hidden;
+    }
+
+    /* our main controller */
+    .nav-open .main-nav {
+        opacity: 1;
+        pointer-events: auto;
+        visibility: visible;
+        transform: translateX(0);
+    }
+
+    .nav-open .icon-mobile-nav.close {
+        display: block;
+    }
+
+    .nav-open .icon-mobile-nav.open {
+        display: none;
+    }
+
+    .main-nav-list {
+        flex-direction: column;
+        gap: 4.8rem;
+    }
+
+    .main-nav-link:link,
+    .main-nav-link:visited {
+        font-size: 3rem;
+    }
+
+}
+
+/* -> for mobile below 704px: (704px/16px=44em) */
+@media(max-width:44em) {
+    .section-pricing-features .grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* padding: 0 3.2rem; */
+
+    }
+
+    .section-meals .grid--3-cols {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .section-meals .container .meal-list {
+        grid-column: span 2;
+        justify-self: center;
+    }
+
+    .heading-secondary {
+        margin: 4.8rem 0;
+    }
+
+    .section-how {
+        padding-bottom: 0;
+    }
+
+    .section-featured {
+        padding: 0;
+        padding-top: 4.8rem;
+    }
+
+    /* Setting Up The Footer */
+    .grid-footer {
+        grid-template-columns: repeat(6, 1fr);
+        gap: 6.4rem 3.2rem;
+        /* padding-left: 8rem; */
+    }
+
+    .logo-col,
+    .address-col {
+        grid-column: span 3;
+    }
+
+    .nav-help {
+        grid-row: 1;
+        grid-column: span 2;
+    }
+}
+
+/* -> for mobile below 590: (704px/16px=37em) */
+@media(max-width:37em) {
+
+
+    .section-pricing-features .grid {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 0 3.2rem;
+
+    }
+
+    .section-how .grid {
+        grid-template-columns: repeat(1, 1fr);
+
+    }
+
+    .section-meals .grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .cta {
+        grid-template-columns: 1fr;
+    }
+
+    .cta-img-box {
+        height: 32rem;
+    }
+
+    .cta-text-box {
+        padding: 3.2rem;
+    }
+
+    .section-pricing-features .grid {
+        justify-items: center;
+    }
+
+    .feature {
+        width: 80%;
+        align-items: center;
+    }
+
+    .testimonials.grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .pricing--starter-plan,
+    .pricing--complete-plan {
+        justify-self: center;
+    }
+
+    .hero {
+        padding: 0 3.2rem;
+    }
+
+    .section-hero {
+        padding: 2.4rem 0 4.8rem 0;
+    }
+
+    .btn,
+    .btn:link,
+    .btn:visited {
+        padding: 1.6rem;
+    }
+
+    .hero-img {
+        width: 90%;
+    }
+
+    .step-img-box:nth-child(2) {
+        grid-row: 1;
+    }
+
+    .step-img-box:nth-child(6) {
+        grid-row: 5;
+    }
+
+    .step-img-box {
+        transform: translateY(2.4rem);
+    }
+
+    .section-meals .grid--3-cols {
+        grid-template-columns: 1fr;
+    }
+
+    .section-meals .container .meal-list {
+        grid-column: span 1;
+        justify-self: center;
+    }
+
+    .gallery.grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.2rem;
+    }
+.pricing-text{
+    padding: 0 1.6rem;
+}
+.feature-text{
+    text-align: center;
+}
+}
