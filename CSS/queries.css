@@ -353,5 +353,9 @@
         padding-bottom: 60%;
     }
 
-  
+    .pricing-plan:hover,
+    .meal-card:hover {
+        transform: translate(0, 0);
+    }
+
 }
