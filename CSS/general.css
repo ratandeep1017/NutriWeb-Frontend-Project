@@ -40,8 +40,8 @@ Extra color That Is Used Here
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
 html {
-    scroll-behavior: smooth;
     font-size: 62.5%;
+    scroll-behavior: smooth;
     /* for main-nav when we move it on the right side of the page */
     overflow-x: hidden;
 }

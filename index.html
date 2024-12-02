@@ -5,11 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="img/favicon.png" />
+    <script defer src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"></script>
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <link rel="stylesheet" href="CSS/general.css">
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="CSS/queries.css">
-
+    <!-- The defer attribute in an HTML <script> tag ensures that the script is downloaded immediately but only executed after the HTML document has been completely parsed. -->
+    <script src="JS/script.js" defer></script>
     <title>Nutri Web</title>
 </head>
 
@@ -18,7 +20,7 @@
     <!-- ! --------------------------HEADER AND NAVBAR CREATION------------------------------------ -->
     <!-- ! ---------------------------------------------------------------------------------- -->
     <!-- <header class="header nav-open"> -->
-    <header class="header">
+    <header class=" header">
         <img class="header-logo" src="img/nutriweb-logo.png" alt="NutriWeb logo">
 
 
@@ -42,7 +44,7 @@
     <!-- ! --------------------------MAIN HERO-SECTION------------------------------------ -->
     <!-- ! ---------------------------------------------------------------------------------- -->
     <main>
-        <section class="section-hero">
+        <section class=" section-hero">
             <div class="hero">
                 <div class="hero-text-box">
                     <h1 class="heading-primary">A healthy meal delivered to your door, every single day</h1>
@@ -52,8 +54,8 @@
                         personal tastes and
                         nutritional needs. We have delivered 250,000+ meals last year!
                     </p>
-                    <a href="#" class="btn btn--full margin-right">Start Eating Well</a>
-                    <a href="#" class="btn btn--outline">Learn More &darr;</a>
+                    <a href="#try-for-free" class="btn btn--full margin-right">Start Eating Well</a>
+                    <a href="#how" class="btn btn--outline">Learn More &darr;</a>
 
                     <div class="delivered-meals">
                         <div class="delivered-imgs">
@@ -446,16 +448,16 @@
                     </ul>
 
                     <p class="copyright">
-                        Copyright © 2027 by NutriWeb, Inc. <br>All rights reserved.
+                        Copyright © <span class="year"></span> by NutriWeb, Inc. All rights reserved.
                     </p>
                 </div>
 
                 <div class="nav-col address-col">
                     <p class="footer-heading">Contact us</p>
                     <div class="footer-nav">
-                        <p class="address">623 Harrison St, 2nd Floor, <br> San Francisco, CA 94107</p>
-                        <a class="footer-link" href="tel:415-201-6370">415-201-6370</a>
-                        <a class="footer-link" href="mailto:hello@NutriWeb.com">hello@NutriWeb.com</a>
+                        <p class="address">123 Elmwood Avenue, Apt 4B,<br>New York, NY 10001</p>
+                        <a class="footer-link" href="tel:415-201-6370">123-456-7890</a>
+                        <a class="footer-link" href="mailto:hello@NutriWeb.com">MainMail@NutriWeb.com</a>
                     </div>
                     </address>
                 </div>
@@ -491,6 +493,9 @@
             </div>
         </footer>
     </main>
+    <script defer src="JS/script.js"></script>
+
 </body>
+
 
 </html>
