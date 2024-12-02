@@ -357,5 +357,7 @@
     .meal-card:hover {
         transform: translate(0, 0);
     }
-
+   .logo {
+       height: 2rem;
+   }
 }
