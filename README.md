@@ -5,7 +5,7 @@ NutriWeb is a responsive frontend web application designed to promote and manage
 - [Overview](#overview)  
 - [Features](#features)  
 - [Technologies Used](#technologies-used)  
-- [Sections](#sections)  
+- [Sections](#Project-Sections)  
 - [How to Use](#how-to-use)  
 - [Setup](#setup)  
 - [Contact](#contact)  
