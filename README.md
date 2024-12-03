@@ -58,8 +58,7 @@ NutriWeb aims to simplify healthy eating with:
 ## Setup  
 1. Clone this repository to your local machine:  
    ```bash  
-   git clone <repository_url>  
-   git clone https://github.com/your-repository-link 
+   git clone https://github.com/ratandeep1017/NutriWeb-Frontend-Project.git
    ```  
 2. Open the `index.html` file in any web browser.  
 3. Ensure a stable internet connection for full functionality.  
