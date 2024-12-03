@@ -65,3 +65,7 @@ NutriWeb aims to simplify healthy eating with:
 
 **Copyright © 2024 NutriWeb, Inc. All rights reserved.**  
 
+
+![Preview](img/preview.png)
+
+
