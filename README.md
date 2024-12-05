@@ -2,13 +2,16 @@
 NutriWeb is a responsive frontend web application designed to promote and manage a food subscription service that provides healthy, personalized meals delivered straight to your door. This project utilizes modern web technologies like **CSS Grids**, **Flexbox**, and **JavaScript** for a seamless user experience across all devices.  
 
 ## Table of Contents  
-- [Overview](#overview)  
-- [Features](#features)  
-- [Technologies Used](#technologies-used)  
-- [Sections](#Project-Sections)  
-- [How to Use](#how-to-use)  
-- [Setup](#setup)  
-- [Contact](#contact)  
+1. **Navbar and Header Section**
+2. **Main Hero-Section**
+3. **Featured in Section**
+4. **How It Works Section**
+5. **Meals Section**
+6. **Testimonial and Gallery Section**
+7. **Pricing and Feature Section**
+8. **Call to Action Section (Form)**
+9. **Footer Section**
+ 
 ## Overview  
 NutriWeb aims to simplify healthy eating with:  
 - Personalized meal plans tailored to individual tastes and nutritional needs.  
